@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { AMWAY_SPONSOR_NUMBER } from "../config"; // ✅ 추가된 부분
+import { AMWAY_SPONSOR_NUMBER } from "./config"; // ✅ colocated import
 
 export default function AmwaySponsorButton() {
-  const [sponsorNumber] = useState(AMWAY_SPONSOR_NUMBER); // ✅ 여기서 config 값 사용
+  const [sponsorNumber] = useState(AMWAY_SPONSOR_NUMBER);
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = async () => {
